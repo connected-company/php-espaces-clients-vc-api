@@ -1,0 +1,16 @@
+{
+    "name": "connected-company/php-espaces-clients-vc-api",
+    "type": "library",
+    "description": "Librairie permettant de gérer le format de données requis par les espaces clients Valeur & Capital.",
+    "authors": [
+        {"name": "Léo Boiron", "email": "lboiron@com-company.fr"}
+    ],
+    "require": {
+        "php": "8.*",
+        "elao/enum": "1.*",
+        "symfony/http-client" : "5.*"
+    },
+    "autoload": {
+        "psr-4": {"Connected\\EspaceClientVC\\": "src/"}
+    }
+}
