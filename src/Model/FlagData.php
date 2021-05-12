@@ -4,6 +4,7 @@ namespace Connected\EspaceClientVC\Model;
 
 use Connected\EspaceClientVC\Enum\FlagEnum;
 use Connected\EspaceClientVC\Contract\FlagMetadataInterface;
+use Symfony\Component\Serializer\Annotation as Serializer;
 
 /**
  * Données d'un flag.
@@ -11,21 +12,25 @@ use Connected\EspaceClientVC\Contract\FlagMetadataInterface;
 class FlagData
 {
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var mixed
      */
     private mixed $value = null;
 
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var string|null
      */
     private ?string $date = null;
 
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var string|null
      */
     private ?string $metadata = null;
 
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var null
      */
     private ?string $displayName = null;

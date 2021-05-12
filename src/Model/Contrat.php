@@ -4,6 +4,7 @@ namespace Connected\EspaceClientVC\Model;
 
 use Connected\EspaceClientVC\Enum\AppIdentifierEnum;
 use Connected\EspaceClientVC\Enum\ContratTypeEnum;
+use Symfony\Component\Serializer\Annotation as Serializer;
 
 /**
  * Modèle de données pour les contrats des EC V&C.
@@ -11,11 +12,13 @@ use Connected\EspaceClientVC\Enum\ContratTypeEnum;
 class Contrat
 {
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var array
      */
     private array $identifiers = [];
 
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var array
      */
     private array $flags = [];
