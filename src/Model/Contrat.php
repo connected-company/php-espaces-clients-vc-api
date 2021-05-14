@@ -12,6 +12,12 @@ use Symfony\Component\Serializer\Annotation as Serializer;
 class Contrat
 {
     /**
+     * @Serializer\Groups({"espace_client"})
+     * @var ContratTypeEnum
+     */
+    private ContratTypeEnum $type;
+
+    /**
      * @var array
      */
     private array $identifiers = [];
@@ -27,8 +33,9 @@ class Contrat
      *
      * @param ContratTypeEnum $type ContratTypeEnum.
      */
-    public function __construct(private ContratTypeEnum $type)
+    public function __construct(ContratTypeEnum $type)
     {
+        $this->type = $type;
     }
 
     /**
