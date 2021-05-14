@@ -61,6 +61,7 @@ class FlagEnum extends ReadableEnum
     const DOCUMENT_APPEL_FOND = 'document_appel_fond'; // OK
     const DOCUMENT_BAIL_COMMERCIAL = 'document_bail_commercial'; // OK
     const DOCUMENT_MANDAT_GESTION = 'document_mandat_gestion'; // OK
+    const DOCUMENT_OFFRE_PRET = 'document_offre_pret';
 
     /**
      * @return array
@@ -114,7 +115,8 @@ class FlagEnum extends ReadableEnum
             static::DOCUMENT_ATTESTATION_NOTAIRE_ACTE => 'document_attestation_notaire_acte',
             static::DOCUMENT_APPEL_FOND => 'document_appel_fond',
             static::DOCUMENT_BAIL_COMMERCIAL => 'document_bail_commercial',
-            static::DOCUMENT_MANDAT_GESTION => 'document_mandat_gestion'
+            static::DOCUMENT_MANDAT_GESTION => 'document_mandat_gestion',
+            static::DOCUMENT_OFFRE_PRET => 'document_offre_pret'
         ];
     }
 
