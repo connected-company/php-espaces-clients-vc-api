@@ -36,10 +36,25 @@ class FlagData
     private ?string $displayName = null;
 
     /**
+     * @Serializer\Groups({"espace_client"})
+     * @var FlagEnum
+     */
+    private FlagEnum $flag;
+
+    /**
      * @param FlagEnum $flag FlagEnum.
      */
-    public function __construct(private FlagEnum $flag)
+    public function __construct(FlagEnum $flag)
     {
+        $this->flag = $flag;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFlag(): string
+    {
+        return $this->flag->getValue();
     }
 
     /**
@@ -99,6 +114,11 @@ class FlagData
         return $this;
     }
 
+    public function getDate(): ?\DateTime
+    {
+        return $this->date;
+    }
+
     /**
      * Metadata.
      *
@@ -113,6 +133,11 @@ class FlagData
         return $this;
     }
 
+    public function getMetadata(): ?FlagMetadataInterface
+    {
+        return $this->metadata;
+    }
+
     /**
      * Display name.
      *
@@ -125,5 +150,10 @@ class FlagData
         $this->displayName = $displayName;
 
         return $this;
+    }
+
+    public function getDisplayName(): ?string
+    {
+        return $this->displayName;
     }
 }
