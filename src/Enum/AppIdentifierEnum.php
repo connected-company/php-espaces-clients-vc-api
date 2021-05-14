@@ -18,7 +18,7 @@ class AppIdentifierEnum extends ReadableEnum
     const GAIA_LOT_ID = 'GAIA_LOT_ID';
     const BOTERO_LOT_ID = 'BOTERO_LOT_ID';
     const HERMES_LOT_ID = 'HERMES_LOT_ID';
-    const ZEPHYR_LOT_ID = 'ZEPHYR_LOT_ID';
+    const ZEPHYR_VENTE_ID = 'ZEPHYR_VENTE_ID';
 
     /**
      * @return array
@@ -32,7 +32,7 @@ class AppIdentifierEnum extends ReadableEnum
             static::GAIA_LOT_ID => 'GAIA_LOT_ID',
             static::BOTERO_LOT_ID => 'BOTERO_LOT_ID',
             static::HERMES_LOT_ID => 'HERMES_LOT_ID',
-            static::ZEPHYR_LOT_ID => 'ZEPHYR_LOT_ID'
+            static::ZEPHYR_VENTE_ID => 'ZEPHYR_VENTE_ID'
         ];
     }
 }
