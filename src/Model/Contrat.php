@@ -12,7 +12,6 @@ use Symfony\Component\Serializer\Annotation as Serializer;
 class Contrat
 {
     /**
-     * @Serializer\Groups({"espace_client"})
      * @var array
      */
     private array $identifiers = [];
@@ -57,6 +56,16 @@ class Contrat
     }
 
     /**
+     * Retourne un array de flags.
+     *
+     * @return array
+     */
+    public function getFlags(): array
+    {
+        return $this->flags;
+    }
+
+    /**
      * Ajout d'un identifiant.
      *
      * @param AppIdentifierEnum $appIdentifier Identifier key.
@@ -69,5 +78,23 @@ class Contrat
         $this->identifiers[$appIdentifier->getValue()] = (string)$id;
 
         return $this;
+    }
+
+    /**
+     * Ajout d'un identifiant.
+     *
+     * @Serializer\Groups({"espace_client"})
+     * @return array
+     */
+    public function getIdentifiers(): array {
+        $identifiers = [];
+
+        foreach ($this->identifiers as $key => $identifier) {
+            $identifiers[] = [
+                "name" => $key, "value" => $identifier
+            ];
+        }
+
+        return $identifiers;
     }
 }
