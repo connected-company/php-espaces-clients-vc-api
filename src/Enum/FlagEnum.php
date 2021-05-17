@@ -61,6 +61,9 @@ class FlagEnum extends ReadableEnum
     const DOCUMENT_APPEL_FOND = 'document_appel_fond'; // OK
     const DOCUMENT_BAIL_COMMERCIAL = 'document_bail_commercial'; // OK
     const DOCUMENT_MANDAT_GESTION = 'document_mandat_gestion'; // OK
+    const DOCUMENT_FICHE_MISE_EN_RELATION = 'document_fiche_mise_en_relation';
+    const DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT = 'document_mandat_recherche_credit_montant';
+    const DOCUMENT_AVIS_CONSEIL_DONNE = 'document_avis_conseil_donne';
     const DOCUMENT_OFFRE_PRET = 'document_offre_pret';
 
     /**
@@ -116,6 +119,9 @@ class FlagEnum extends ReadableEnum
             static::DOCUMENT_APPEL_FOND => 'document_appel_fond',
             static::DOCUMENT_BAIL_COMMERCIAL => 'document_bail_commercial',
             static::DOCUMENT_MANDAT_GESTION => 'document_mandat_gestion',
+            static::DOCUMENT_FICHE_MISE_EN_RELATION => 'document_fiche_mise_en_relation',
+            static::DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT => 'document_mandat_recherche_credit_montant',
+            static::DOCUMENT_AVIS_CONSEIL_DONNE => 'document_avis_conseil_donne',
             static::DOCUMENT_OFFRE_PRET => 'document_offre_pret'
         ];
     }
