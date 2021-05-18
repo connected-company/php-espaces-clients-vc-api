@@ -36,7 +36,6 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_STATUT)
             ],
             self::FINANCEMENT => [
-                FlagEnum::get(FlagEnum::DATE_OUVERTURE_PRET),
                 FlagEnum::get(FlagEnum::DUREE_PRET),
                 FlagEnum::get(FlagEnum::TAUX_PRET),
                 FlagEnum::get(FlagEnum::MONTANT_PRET),
