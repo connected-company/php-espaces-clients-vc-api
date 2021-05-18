@@ -142,7 +142,11 @@ class FlagEnum extends ReadableEnum
             FlagEnum::APPEL_DE_FOND_APPELE,
             FlagEnum::DOCUMENT_ANNEXES,
             FlagEnum::DOCUMENT_PLANS,
-            FlagEnum::DOCUMENT_APPEL_FOND
+            FlagEnum::DOCUMENT_APPEL_FOND,
+            FlagEnum::DOCUMENT_FICHE_MISE_EN_RELATION,
+            FlagEnum::DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT,
+            FlagEnum::DOCUMENT_AVIS_CONSEIL_DONNE,
+            FlagEnum::DOCUMENT_OFFRE_PRET
         ];
 
         return in_array($flag, $flagAsCollection);
