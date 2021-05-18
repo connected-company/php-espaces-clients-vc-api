@@ -114,7 +114,7 @@ class FlagData
         return $this;
     }
 
-    public function getDate(): ?\DateTime
+    public function getDate(): ?string
     {
         return $this->date;
     }
