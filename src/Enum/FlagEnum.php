@@ -46,6 +46,7 @@ class FlagEnum extends ReadableEnum
     const APPEL_DE_FOND_SOLDE_RESTANT_A_APPELER = 'appel_de_fond_solde_restant_a_appeler';
     const APPEL_DE_FOND_STATUT = 'appel_de_fond_statut';
     // Financement
+    const DATE_OUVERTURE_PRET = 'date_ouverture_pret'; // NC
     const DUREE_PRET = 'duree_pret'; // NC
     const TAUX_PRET = 'taux_pret'; // NC
     const MONTANT_PRET = 'montant_pret'; // NC
@@ -104,6 +105,7 @@ class FlagEnum extends ReadableEnum
             static::APPEL_DE_FOND_SOLDE_RESTANT_A_APPELER => 'appel_de_fond_solde_restant_a_appeler',
             static::APPEL_DE_FOND_STATUT => 'appel_de_fond_statut',
             // Financement
+            static::DATE_OUVERTURE_PRET => 'date_ouverture_pret',
             static::DUREE_PRET => 'duree_pret',
             static::TAUX_PRET => 'taux_pret',
             static::MONTANT_PRET => 'montant_pret',
