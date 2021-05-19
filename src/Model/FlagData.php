@@ -126,14 +126,14 @@ class FlagData
      *
      * @return self
      */
-    public function setMetadata(?FlagMetadataInterface $flagMetadata): self
+    public function setMetadata(FlagMetadataInterface $flagMetadata): self
     {
         $this->metadata = $flagMetadata->getMetadata();
 
         return $this;
     }
 
-    public function getMetadata(): ?FlagMetadataInterface
+    public function getMetadata(): ?string
     {
         return $this->metadata;
     }
