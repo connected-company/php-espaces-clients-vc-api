@@ -37,7 +37,9 @@ class ContratFactory
 
         foreach ($configuration->nextFlag() as $flag) {
             foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
-                $contrat->addFlagData($flagData);
+                if(!empty($flagData->getValue())) {
+                    $contrat->addFlagData($flagData);
+                }
             }
         }
 
@@ -45,7 +47,9 @@ class ContratFactory
             $flags = FlagGroupEnum::mapping($flagGroup);
             foreach ($flags as $flag) {
                 foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
-                    $contrat->addFlagData($flagData);
+                    if(!empty($flagData->getValue())) {
+                        $contrat->addFlagData($flagData);
+                    }
                 }
             }
         }
