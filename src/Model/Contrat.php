@@ -67,4 +67,20 @@ class Contrat
 
         return $this;
     }
+
+    /**
+     * Identifiants sous la forme de tableau.
+     *
+     * @return array
+     */
+    public function getIdentifiersAsArray(): array
+    {
+        $identifiers = [];
+
+        foreach ($this->identifiers as $app => $id) {
+            $identifiers[] = ['name' => $app, 'value' => (int)$id];
+        }
+
+        return $identifiers;
+    }
 }
