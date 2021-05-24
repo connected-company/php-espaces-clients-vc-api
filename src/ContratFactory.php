@@ -37,17 +37,25 @@ class ContratFactory
         $contrat = new Contrat($type);
 
         foreach ($configuration->nextFlag() as $flag) {
-            foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
-                $contrat->addFlagData($flagData);
+            try {
+                foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
+                    $contrat->addFlagData($flagData);
+                }
+            } catch (\Exception $e) {
+                // Pas de gestion d'erreurs sur le projet espace clients, alors on ignore les erreurs...
             }
         }
 
         foreach ($configuration->nextFlagGroup() as $flagGroup) {
-            $flags = FlagGroupEnum::mapping($flagGroup);
-            foreach ($flags as $flag) {
-                foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
-                    $contrat->addFlagData($flagData);
+            try {
+                $flags = FlagGroupEnum::mapping($flagGroup);
+                foreach ($flags as $flag) {
+                    foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
+                        $contrat->addFlagData($flagData);
+                    }
                 }
+            } catch (\Exception $e) {
+                // Pas de gestion d'erreurs sur le projet espace clients, alors on ignore les erreurs...
             }
         }
 
@@ -67,16 +75,12 @@ class ContratFactory
     private function processFlagRequested(FlagEnum $flag, Configuration $configuration, mixed $appContrat): FlagDataCollection
     {
         foreach ($this->strategies as $strategy) {
-            try {
-                if ($strategy->getMapping()->supports($flag)) {
-                    $flagCollection = new FlagDataCollection($flag);
-                    $flagParameter = FlagEnum::isCollection($flag) ? $flagCollection : $flagCollection->newFlag();
-                    $strategy->getMapping()->get($flag)($flagParameter, $configuration->getClient(), $appContrat);
+            if ($strategy->getMapping()->supports($flag)) {
+                $flagCollection = new FlagDataCollection($flag);
+                $flagParameter = FlagEnum::isCollection($flag) ? $flagCollection : $flagCollection->newFlag();
+                $strategy->getMapping()->get($flag)($flagParameter, $configuration->getClient(), $appContrat);
 
-                    return $flagCollection;
-                }
-            } catch (\Exception $e) {
-                // Pas de gestion d'erreurs sur le projet espace clients, alors on ignore les erreurs...
+                return $flagCollection;
             }
         }
 
