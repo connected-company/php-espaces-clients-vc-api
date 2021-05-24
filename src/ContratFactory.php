@@ -67,12 +67,16 @@ class ContratFactory
     private function processFlagRequested(FlagEnum $flag, Configuration $configuration, mixed $appContrat): FlagDataCollection
     {
         foreach ($this->strategies as $strategy) {
-            if ($strategy->getMapping()->supports($flag)) {
-                $flagCollection = new FlagDataCollection($flag);
-                $flagParameter = FlagEnum::isCollection($flag) ? $flagCollection : $flagCollection->newFlag();
-                $strategy->getMapping()->get($flag)($flagParameter, $configuration->getClient(), $appContrat);
+            try {
+                if ($strategy->getMapping()->supports($flag)) {
+                    $flagCollection = new FlagDataCollection($flag);
+                    $flagParameter = FlagEnum::isCollection($flag) ? $flagCollection : $flagCollection->newFlag();
+                    $strategy->getMapping()->get($flag)($flagParameter, $configuration->getClient(), $appContrat);
 
-                return $flagCollection;
+                    return $flagCollection;
+                }
+            } catch (\Exception $e) {
+                // Pas de gestion d'erreurs sur le projet espace clients, alors on ignore les erreurs...
             }
         }
 
