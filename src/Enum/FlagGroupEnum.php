@@ -24,6 +24,13 @@ class FlagGroupEnum extends ReadableEnum
         ];
     }
 
+    /**
+     * Mapping des groupes/
+     *
+     * @param      FlagGroupEnum  $flagGroup  The flag group
+     *
+     * @return     array
+     */
     public static function mapping(FlagGroupEnum $flagGroup): array
     {
         $mapping = [
@@ -31,7 +38,7 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_LIBELLE),
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_DATE),
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_MONTANT),
-                FlagEnum::get(FlagEnum::APPEL_DE_FOND_STATUT)
+                FlagEnum::get(FlagEnum::APPEL_DE_FOND_APPELE)
             ]
         ];
 

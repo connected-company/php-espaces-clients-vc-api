@@ -5,6 +5,7 @@ namespace Connected\EspaceClientVC;
 use Connected\EspaceClientVC\Enum\ContratTypeEnum;
 use Connected\EspaceClientVC\Enum\FlagEnum;
 use Connected\EspaceClientVC\Enum\FlagGroupEnum;
+use Connected\EspaceClientVC\Exception\StrategyNotFoundException;
 use Connected\EspaceClientVC\Model\Configuration;
 use Connected\EspaceClientVC\Model\Contrat;
 use Connected\EspaceClientVC\Model\FlagDataCollection;
@@ -75,6 +76,6 @@ class ContratFactory
             }
         }
 
-        throw new \LogicException('Aucune stratégie trouvé pour le flag `' . $flag . '`.', 500);
+        throw new StrategyNotFoundException($flag);
     }
 }
