@@ -65,6 +65,8 @@ class FlagEnum extends ReadableEnum
     const DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT = 'document_mandat_recherche_credit_montant';
     const DOCUMENT_AVIS_CONSEIL_DONNE = 'document_avis_conseil_donne';
     const DOCUMENT_OFFRE_PRET = 'document_offre_pret';
+    // Interlocuteur
+    const INTERLOCUTEUR_PRINCIPAL_LDAP = 'interlocuteur_principal_ldap';
 
     /**
      * @return array
@@ -122,7 +124,9 @@ class FlagEnum extends ReadableEnum
             static::DOCUMENT_FICHE_MISE_EN_RELATION => 'document_fiche_mise_en_relation',
             static::DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT => 'document_mandat_recherche_credit_montant',
             static::DOCUMENT_AVIS_CONSEIL_DONNE => 'document_avis_conseil_donne',
-            static::DOCUMENT_OFFRE_PRET => 'document_offre_pret'
+            static::DOCUMENT_OFFRE_PRET => 'document_offre_pret',
+            // Interlocuteur
+            static::INTERLOCUTEUR_PRINCIPAL_LDAP => 'interlocuteur_principal_ldap'
         ];
     }
 
