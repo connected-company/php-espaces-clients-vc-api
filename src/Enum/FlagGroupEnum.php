@@ -14,6 +14,7 @@ class FlagGroupEnum extends ReadableEnum
 
     const APPELS_DE_FOND = 'appels_de_fond';
     const FINANCEMENT = 'financement';
+    const INTERLOCUTEURS = 'interlocuteurs';
 
     /**
      * @return array
@@ -22,7 +23,8 @@ class FlagGroupEnum extends ReadableEnum
     {
         return [
             static::APPELS_DE_FOND => 'appels_de_fond',
-            static::FINANCEMENT => 'financement'
+            static::FINANCEMENT => 'financement',
+            static::INTERLOCUTEURS => 'interlocuteurs'
         ];
     }
 
@@ -43,6 +45,9 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::ADRESSE_BANQUE),
                 FlagEnum::get(FlagEnum::COMMUNE_BANQUE),
                 FlagEnum::get(FlagEnum::CODE_POSTAL_BANQUE)
+            ],
+            self::INTERLOCUTEURS => [
+                FlagEnum::get(FlagEnum::INTERLOCUTEUR_PRINCIPAL_LDAP)
             ]
         ];
 
