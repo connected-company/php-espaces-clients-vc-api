@@ -36,21 +36,25 @@ class ContratFactory
         $contrat = new Contrat($type);
 
         foreach ($configuration->nextFlag() as $flag) {
-            foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
-                if(!empty($flagData->getValue())) {
+            try {
+                foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
                     $contrat->addFlagData($flagData);
                 }
+            } catch (\Exception $e) {
+                // Pas de gestion d'erreurs sur le projet espace clients, alors on ignore les erreurs...
             }
         }
 
         foreach ($configuration->nextFlagGroup() as $flagGroup) {
-            $flags = FlagGroupEnum::mapping($flagGroup);
-            foreach ($flags as $flag) {
-                foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
-                    if(!empty($flagData->getValue())) {
+            try {
+                $flags = FlagGroupEnum::mapping($flagGroup);
+                foreach ($flags as $flag) {
+                    foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
                         $contrat->addFlagData($flagData);
                     }
                 }
+            } catch (\Exception $e) {
+                // Pas de gestion d'erreurs sur le projet espace clients, alors on ignore les erreurs...
             }
         }
 
