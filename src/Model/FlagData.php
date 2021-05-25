@@ -47,7 +47,7 @@ class FlagData
     public function setValue(mixed $value): self
     {
         if ($value instanceof \DateTime) {
-            $value = $value->format('Y-m-d\TH:i:s.u\Z');
+            $value = $value->format(\DateTimeInterface::ATOM);
         }
         $this->value = $value;
 
@@ -70,8 +70,8 @@ class FlagData
      */
     public function setPeriode(\DateTime $start, \DateTime $end): self
     {
-        $start = $start->format('Y-m-d\TH:i:s.u\Z');
-        $end = $end->format('Y-m-d\TH:i:s.u\Z');
+        $start = $start->format(\DateTimeInterface::ATOM);
+        $end = $end->format(\DateTimeInterface::ATOM);
 
         $this->setValue($start . '_' . $end);
 
@@ -88,7 +88,7 @@ class FlagData
     public function setDate(?\DateTime $date): self
     {
         if ($date) {
-            $this->date = $date->format('Y-m-d\TH:i:s.u\Z');
+            $this->date = $date->format(\DateTimeInterface::ATOM);
         }
 
         return $this;
