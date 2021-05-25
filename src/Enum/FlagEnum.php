@@ -44,8 +44,8 @@ class FlagEnum extends ReadableEnum
     const APPEL_DE_FOND_MONTANT = 'appel_de_fond_montant';
     const APPEL_DE_FOND_APPELE = 'appel_de_fond_appele';
     const APPEL_DE_FOND_SOLDE_RESTANT_A_APPELER = 'appel_de_fond_solde_restant_a_appeler';
+    const APPEL_DE_FOND_STATUT = 'appel_de_fond_statut';
     // Financement
-    const DATE_OUVERTURE_PRET = 'date_ouverture_pret'; // NC
     const DUREE_PRET = 'duree_pret'; // NC
     const TAUX_PRET = 'taux_pret'; // NC
     const MONTANT_PRET = 'montant_pret'; // NC
@@ -61,6 +61,12 @@ class FlagEnum extends ReadableEnum
     const DOCUMENT_APPEL_FOND = 'document_appel_fond'; // OK
     const DOCUMENT_BAIL_COMMERCIAL = 'document_bail_commercial'; // OK
     const DOCUMENT_MANDAT_GESTION = 'document_mandat_gestion'; // OK
+    const DOCUMENT_FICHE_MISE_EN_RELATION = 'document_fiche_mise_en_relation';
+    const DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT = 'document_mandat_recherche_credit_montant';
+    const DOCUMENT_AVIS_CONSEIL_DONNE = 'document_avis_conseil_donne';
+    const DOCUMENT_OFFRE_PRET = 'document_offre_pret';
+    // Interlocuteur
+    const INTERLOCUTEUR_PRINCIPAL_LDAP = 'interlocuteur_principal_ldap';
 
     /**
      * @return array
@@ -98,8 +104,8 @@ class FlagEnum extends ReadableEnum
             static::APPEL_DE_FOND_MONTANT => 'appel_de_fond_montant',
             static::APPEL_DE_FOND_APPELE => 'appel_de_fond_appele',
             static::APPEL_DE_FOND_SOLDE_RESTANT_A_APPELER => 'appel_de_fond_solde_restant_a_appeler',
+            static::APPEL_DE_FOND_STATUT => 'appel_de_fond_statut',
             // Financement
-            static::DATE_OUVERTURE_PRET => 'date_ouverture_pret',
             static::DUREE_PRET => 'duree_pret',
             static::TAUX_PRET => 'taux_pret',
             static::MONTANT_PRET => 'montant_pret',
@@ -114,7 +120,13 @@ class FlagEnum extends ReadableEnum
             static::DOCUMENT_ATTESTATION_NOTAIRE_ACTE => 'document_attestation_notaire_acte',
             static::DOCUMENT_APPEL_FOND => 'document_appel_fond',
             static::DOCUMENT_BAIL_COMMERCIAL => 'document_bail_commercial',
-            static::DOCUMENT_MANDAT_GESTION => 'document_mandat_gestion'
+            static::DOCUMENT_MANDAT_GESTION => 'document_mandat_gestion',
+            static::DOCUMENT_FICHE_MISE_EN_RELATION => 'document_fiche_mise_en_relation',
+            static::DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT => 'document_mandat_recherche_credit_montant',
+            static::DOCUMENT_AVIS_CONSEIL_DONNE => 'document_avis_conseil_donne',
+            static::DOCUMENT_OFFRE_PRET => 'document_offre_pret',
+            // Interlocuteur
+            static::INTERLOCUTEUR_PRINCIPAL_LDAP => 'interlocuteur_principal_ldap'
         ];
     }
 
@@ -134,7 +146,11 @@ class FlagEnum extends ReadableEnum
             FlagEnum::APPEL_DE_FOND_APPELE,
             FlagEnum::DOCUMENT_ANNEXES,
             FlagEnum::DOCUMENT_PLANS,
-            FlagEnum::DOCUMENT_APPEL_FOND
+            FlagEnum::DOCUMENT_APPEL_FOND,
+            FlagEnum::DOCUMENT_FICHE_MISE_EN_RELATION,
+            FlagEnum::DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT,
+            FlagEnum::DOCUMENT_AVIS_CONSEIL_DONNE,
+            FlagEnum::DOCUMENT_OFFRE_PRET
         ];
 
         return in_array($flag, $flagAsCollection);
