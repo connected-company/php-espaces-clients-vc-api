@@ -70,7 +70,11 @@ class Configuration
     public function nextFlagGroup(): \Generator
     {
         foreach ($this->flagGroups as $flagGroup) {
-            yield FlagGroupEnum::get($flagGroup);
+            try {
+                yield FlagGroupEnum::get($flagGroup);
+            } catch (\Exception $e) {
+                return null;
+            }
         }
     }
 }
