@@ -54,7 +54,11 @@ class Configuration
     public function nextFlag(): \Generator
     {
         foreach ($this->flags as $flag) {
-            yield FlagEnum::get($flag);
+            try {
+                yield FlagEnum::get($flag);
+            } catch (\Exception $e) {
+                return null;
+            }
         }
     }
 
