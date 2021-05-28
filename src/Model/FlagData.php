@@ -67,7 +67,7 @@ class FlagData
     public function setValue(mixed $value): self
     {
         if ($value instanceof \DateTime) {
-            $value = $value->format('Y-m-d\TH:i:s.u\Z');
+            $value = \DateTime::createFromFormat(\DateTimeInterface::ATOM, $value->format(\DateTimeInterface::ATOM));
         }
         $this->value = $value;
 
