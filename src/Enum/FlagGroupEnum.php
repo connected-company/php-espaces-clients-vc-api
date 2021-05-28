@@ -13,6 +13,7 @@ class FlagGroupEnum extends ReadableEnum
     use ChoiceEnumTrait;
 
     const APPELS_DE_FOND = 'appels_de_fond';
+    const DOCUMENTS_APPEL_FOND = 'documents_appel_fond';
 
     /**
      * @return array
@@ -21,6 +22,7 @@ class FlagGroupEnum extends ReadableEnum
     {
         return [
             static::APPELS_DE_FOND => 'appels_de_fond',
+            static::DOCUMENTS_APPEL_FOND => 'documents_appel_fond'
         ];
     }
 
@@ -39,6 +41,9 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_DATE),
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_MONTANT),
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_APPELE)
+            ],
+            self::DOCUMENTS_APPEL_FOND => [
+                FlagEnum::get(FlagEnum::DOCUMENT_APPEL_FOND)
             ]
         ];
 

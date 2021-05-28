@@ -57,7 +57,7 @@ class Configuration
             try {
                 yield FlagEnum::get($flag);
             } catch (\Exception $e) {
-                return null;
+                yield null;
             }
         }
     }
@@ -73,7 +73,7 @@ class Configuration
             try {
                 yield FlagGroupEnum::get($flagGroup);
             } catch (\Exception $e) {
-                return null;
+                yield null;
             }
         }
     }

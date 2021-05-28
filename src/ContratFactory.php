@@ -41,7 +41,7 @@ class ContratFactory
                 foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
                     $contrat->addFlagData($flagData);
                 }
-            } catch (\Exception $e) {
+            } catch (\Throwable $e) {
                 // Pas de gestion d'erreurs sur le projet espace clients, alors on ignore les erreurs...
             }
         }
@@ -54,7 +54,7 @@ class ContratFactory
                         $contrat->addFlagData($flagData);
                     }
                 }
-            } catch (\Exception $e) {
+            } catch (\Throwable $e) {
                 // Pas de gestion d'erreurs sur le projet espace clients, alors on ignore les erreurs...
             }
         }
