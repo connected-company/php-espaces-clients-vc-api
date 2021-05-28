@@ -4,6 +4,7 @@ namespace Connected\EspaceClientVC\Model;
 
 use Connected\EspaceClientVC\Enum\FlagEnum;
 use Connected\EspaceClientVC\Contract\FlagMetadataInterface;
+use Symfony\Component\Serializer\Annotation as Serializer;
 
 /**
  * Données d'un flag.
@@ -11,30 +12,49 @@ use Connected\EspaceClientVC\Contract\FlagMetadataInterface;
 class FlagData
 {
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var mixed
      */
     private mixed $value = null;
 
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var string|null
      */
     private ?string $date = null;
 
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var string|null
      */
     private ?string $metadata = null;
 
     /**
+     * @Serializer\Groups({"espace_client"})
      * @var null
      */
     private ?string $displayName = null;
 
     /**
+     * @Serializer\Groups({"espace_client"})
+     * @var FlagEnum
+     */
+    private FlagEnum $flag;
+
+    /**
      * @param FlagEnum $flag FlagEnum.
      */
-    public function __construct(private FlagEnum $flag)
+    public function __construct(FlagEnum $flag)
     {
+        $this->flag = $flag;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFlag(): string
+    {
+        return $this->flag->getValue();
     }
 
     /**
@@ -94,6 +114,11 @@ class FlagData
         return $this;
     }
 
+    public function getDate(): ?string
+    {
+        return $this->date;
+    }
+
     /**
      * Metadata.
      *
@@ -101,11 +126,16 @@ class FlagData
      *
      * @return self
      */
-    public function setMetadata(?FlagMetadataInterface $flagMetadata): self
+    public function setMetadata(FlagMetadataInterface $flagMetadata): self
     {
         $this->metadata = $flagMetadata->getMetadata();
 
         return $this;
+    }
+
+    public function getMetadata(): ?string
+    {
+        return $this->metadata;
     }
 
     /**
@@ -120,5 +150,10 @@ class FlagData
         $this->displayName = $displayName;
 
         return $this;
+    }
+
+    public function getDisplayName(): ?string
+    {
+        return $this->displayName;
     }
 }

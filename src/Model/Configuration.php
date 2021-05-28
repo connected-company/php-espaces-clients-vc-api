@@ -54,7 +54,11 @@ class Configuration
     public function nextFlag(): \Generator
     {
         foreach ($this->flags as $flag) {
-            yield FlagEnum::get($flag);
+            try {
+                yield FlagEnum::get($flag);
+            } catch (\Exception $e) {
+                return null;
+            }
         }
     }
 
@@ -66,7 +70,11 @@ class Configuration
     public function nextFlagGroup(): \Generator
     {
         foreach ($this->flagGroups as $flagGroup) {
-            yield FlagGroupEnum::get($flagGroup);
+            try {
+                yield FlagGroupEnum::get($flagGroup);
+            } catch (\Exception $e) {
+                return null;
+            }
         }
     }
 }
