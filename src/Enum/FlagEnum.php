@@ -13,7 +13,6 @@ class FlagEnum extends ReadableEnum
     use ChoiceEnumTrait;
 
     // Lot
-    const LOT_ID = 'lot_id';  // OK
     const LOT_NUMERO = 'lot_numero';  // OK
     const LOT_TYPE = 'lot_type';  // OK
     const LOT_SUPERFICIE = 'lot_superficie';  // OK
@@ -76,7 +75,6 @@ class FlagEnum extends ReadableEnum
     {
         return [
             // Lot
-            static::LOT_ID => 'lot_id',
             static::LOT_NUMERO => 'lot_numero',
             static::LOT_TYPE => 'lot_type',
             static::LOT_SUPERFICIE => 'lot_superficie',
