@@ -44,7 +44,7 @@ class FlagEnum extends ReadableEnum
     const APPEL_DE_FOND_MONTANT = 'appel_de_fond_montant';
     const APPEL_DE_FOND_APPELE = 'appel_de_fond_appele';
     const APPEL_DE_FOND_SOLDE_RESTANT_A_APPELER = 'appel_de_fond_solde_restant_a_appeler';
-    const APPEL_DE_FOND_SOLDE_RESTANT_A_REGLER = 'appel_de_fond_solde_restant_a_regler';
+    const APPEL_DE_FOND_SOLDE_A_REGLER = 'appel_de_fond_solde_a_regler';
     // Financement
     const DATE_OUVERTURE_PRET = 'date_ouverture_pret'; // NC
     const DUREE_PRET = 'duree_pret'; // NC
@@ -100,7 +100,7 @@ class FlagEnum extends ReadableEnum
             static::APPEL_DE_FOND_MONTANT => 'appel_de_fond_montant',
             static::APPEL_DE_FOND_APPELE => 'appel_de_fond_appele',
             static::APPEL_DE_FOND_SOLDE_RESTANT_A_APPELER => 'appel_de_fond_solde_restant_a_appeler',
-            static::APPEL_DE_FOND_SOLDE_RESTANT_A_REGLER => 'appel_de_fond_solde_restant_a_regler',
+            static::APPEL_DE_FOND_SOLDE_A_REGLER => 'appel_de_fond_solde_a_regler',
             // Financement
             static::DATE_OUVERTURE_PRET => 'date_ouverture_pret',
             static::DUREE_PRET => 'duree_pret',
