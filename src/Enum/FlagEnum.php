@@ -67,6 +67,7 @@ class FlagEnum extends ReadableEnum
     const DOCUMENT_OFFRE_PRET = 'document_offre_pret';
     // Interlocuteur
     const INTERLOCUTEUR_PRINCIPAL_LDAP = 'interlocuteur_principal_ldap';
+    const INTERLOCUTEUR_LDAP = 'interlocuteur_ldap';
 
     /**
      * @return array
@@ -126,7 +127,8 @@ class FlagEnum extends ReadableEnum
             static::DOCUMENT_AVIS_CONSEIL_DONNE => 'document_avis_conseil_donne',
             static::DOCUMENT_OFFRE_PRET => 'document_offre_pret',
             // Interlocuteur
-            static::INTERLOCUTEUR_PRINCIPAL_LDAP => 'interlocuteur_principal_ldap'
+            static::INTERLOCUTEUR_PRINCIPAL_LDAP => 'interlocuteur_principal_ldap',
+            static::INTERLOCUTEUR_LDAP => 'interlocuteur_ldap'
         ];
     }
 
@@ -150,7 +152,8 @@ class FlagEnum extends ReadableEnum
             FlagEnum::DOCUMENT_FICHE_MISE_EN_RELATION,
             FlagEnum::DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT,
             FlagEnum::DOCUMENT_AVIS_CONSEIL_DONNE,
-            FlagEnum::DOCUMENT_OFFRE_PRET
+            FlagEnum::DOCUMENT_OFFRE_PRET,
+            FlagEnum::INTERLOCUTEUR_LDAP
         ];
 
         return in_array($flag, $flagAsCollection);

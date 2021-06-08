@@ -47,7 +47,7 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::CODE_POSTAL_BANQUE)
             ],
             self::INTERLOCUTEURS => [
-                FlagEnum::get(FlagEnum::INTERLOCUTEUR_PRINCIPAL_LDAP)
+                FlagEnum::get(FlagEnum::INTERLOCUTEUR_LDAP)
             ]
         ];
 
