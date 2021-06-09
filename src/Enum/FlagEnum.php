@@ -153,7 +153,8 @@ class FlagEnum extends ReadableEnum
             FlagEnum::DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT,
             FlagEnum::DOCUMENT_AVIS_CONSEIL_DONNE,
             FlagEnum::DOCUMENT_OFFRE_PRET,
-            FlagEnum::INTERLOCUTEUR_LDAP
+            FlagEnum::INTERLOCUTEUR_LDAP,
+            FlagEnum::INTERLOCUTEUR_PRINCIPAL_LDAP
         ];
 
         return in_array($flag, $flagAsCollection);
