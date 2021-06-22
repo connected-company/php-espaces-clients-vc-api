@@ -108,7 +108,7 @@ class FlagData
     public function setDate(?\DateTime $date): self
     {
         if ($date) {
-            $this->date = $date->format('Y-m-d\TH:i:s.u\Z');
+            $this->date = $date->format(\DateTimeInterface::ATOM);
         }
 
         return $this;
