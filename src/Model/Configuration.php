@@ -47,34 +47,36 @@ class Configuration
     }
 
     /**
-     * Générateur sur les Flags.
-     *
-     * @return \Generator
+     * @return array
      */
-    public function nextFlag(): \Generator
+    public function getExistingFlags(): array
     {
+        $flags = [];
+
         foreach ($this->flags as $flag) {
             try {
-                yield FlagEnum::get($flag);
+                $flags[] = FlagEnum::get($flag);
             } catch (\Exception $e) {
-                return null;
             }
         }
+
+        return $flags;
     }
 
     /**
-     * Générateur sur les FlagGroups.
-     *
-     * @return \Generator
+     * @return array
      */
-    public function nextFlagGroup(): \Generator
+    public function getExistingFlagGroups(): array
     {
+        $flagGroups = [];
+
         foreach ($this->flagGroups as $flagGroup) {
             try {
-                yield FlagGroupEnum::get($flagGroup);
+                $flagGroups[] = FlagGroupEnum::get($flagGroup);
             } catch (\Exception $e) {
-                return null;
             }
         }
+
+        return $flagGroups;
     }
 }
