@@ -35,7 +35,7 @@ class ContratFactory
     {
         $contrat = new Contrat($type);
 
-        foreach ($configuration->nextFlag() as $flag) {
+        foreach ($configuration->getExistingFlags() as $flag) {
             try {
                 foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
                     if(!empty($flagData->getValue())) {
@@ -47,7 +47,7 @@ class ContratFactory
             }
         }
 
-        foreach ($configuration->nextFlagGroup() as $flagGroup) {
+        foreach ($configuration->getExistingFlagGroups() as $flagGroup) {
             try {
                 $flags = FlagGroupEnum::mapping($flagGroup);
                 foreach ($flags as $flag) {
