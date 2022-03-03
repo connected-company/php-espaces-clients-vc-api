@@ -29,6 +29,7 @@ class FlagEnum extends ReadableEnum
     const DATE_RESERVATION = 'date_reservation'; // OK
     const VENDU_PAR = 'vendu_par'; // OK
     const ACHAT_CASH = 'achat_cash'; // OK
+    const ACHAT_TTC = 'achat_ttc'; // OK
     const DATE_ACTE = 'date_acte'; // OK
     const DATE_OFFRE_DE_PRET = 'date_offre_de_pret'; // NC
     const DATE_ACCEPTATION_OFFRE_DE_PRET = 'date_acceptation_offre_de_pret'; // NC
@@ -94,6 +95,7 @@ class FlagEnum extends ReadableEnum
             static::DATE_ACCEPTATION_OFFRE_DE_PRET => 'date_acceptation_offre_de_pret',
             static::VENDU_PAR => 'vendu_par',
             static::ACHAT_CASH => 'achat_cash',
+            static::ACHAT_TTC => 'achat_ttc',
             // Appels de fonds
             static::APPEL_DE_FOND_LIBELLE => 'appel_de_fond_libelle',
             static::APPEL_DE_FOND_DATE => 'appel_de_fond_date',
