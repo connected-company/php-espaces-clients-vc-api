@@ -25,11 +25,11 @@ class FlagEnum extends ReadableEnum
     const DATE_ACTABILITE = 'date_actabilite'; // OK
     // Vente
     const CONTRAT_FISCALITE = 'contrat_fiscalite'; // OK
-    const MONTANT_ACQUISITION = 'montant_acquisition'; // OK / ATTENTE DE RETOURS HT OU TTC ?
+    const MONTANT_ACQUISITION = 'montant_acquisition'; // OK
+    const MONTANT_ACQUISITION_HT = 'montant_acquisition_ht'; // OK
     const DATE_RESERVATION = 'date_reservation'; // OK
     const VENDU_PAR = 'vendu_par'; // OK
     const ACHAT_CASH = 'achat_cash'; // OK
-    const ACHAT_TTC = 'achat_ttc'; // OK
     const DATE_ACTE = 'date_acte'; // OK
     const DATE_OFFRE_DE_PRET = 'date_offre_de_pret'; // NC
     const DATE_ACCEPTATION_OFFRE_DE_PRET = 'date_acceptation_offre_de_pret'; // NC
@@ -38,6 +38,7 @@ class FlagEnum extends ReadableEnum
     const DATE_NOTIFICATION_LIVRAISON = 'date_notification_livraison'; // A VOIR
     const DATE_LIVRAISON = 'date_livraison'; // A DEFINIR
     const DATE_LIVRAISON_PREVISIONNELLE = 'date_livraison_previsionnelle'; // A DEFINIR
+    const ACHAT_TTC = 'achat_ttc'; // OK
 
     // Appels de fonds
     const APPEL_DE_FOND_LIBELLE = 'appel_de_fond_libelle'; // OK
@@ -85,6 +86,7 @@ class FlagEnum extends ReadableEnum
             // Vente
             static::CONTRAT_FISCALITE => 'contrat_fiscalite',
             static::MONTANT_ACQUISITION => 'montant_acquisition',
+            static::MONTANT_ACQUISITION_HT => 'montant_acquisition_ht',
             static::DATE_RESERVATION => 'date_reservation',
             static::DATE_ACTE => 'date_acte',
             static::DATE_PRE_LIVRAISON => 'date_pre_livraison',
