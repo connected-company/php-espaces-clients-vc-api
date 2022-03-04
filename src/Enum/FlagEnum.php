@@ -47,7 +47,6 @@ class FlagEnum extends ReadableEnum
     const APPEL_DE_FOND_STATUT = 'appel_de_fond_statut';
     // Financement
     const DUREE_PRET = 'duree_pret'; // NC
-    const TAUX_PRET = 'taux_pret'; // NC
     const MONTANT_PRET = 'montant_pret'; // NC
     const NOM_BANQUE = 'nom_banque'; // NC
     const ADRESSE_BANQUE = 'adresse_banque'; // NC
@@ -65,6 +64,7 @@ class FlagEnum extends ReadableEnum
     const DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT = 'document_mandat_recherche_credit_montant';
     const DOCUMENT_AVIS_CONSEIL_DONNE = 'document_avis_conseil_donne';
     const DOCUMENT_OFFRE_PRET = 'document_offre_pret';
+    const DOCUMENT_FINANCEMENT_AUTRE = 'document_financement_autre'; // OK
     // Interlocuteur
     const INTERLOCUTEUR_PRINCIPAL_LDAP = 'interlocuteur_principal_ldap';
     const INTERLOCUTEUR_LDAP = 'interlocuteur_ldap';
@@ -108,7 +108,6 @@ class FlagEnum extends ReadableEnum
             static::APPEL_DE_FOND_STATUT => 'appel_de_fond_statut',
             // Financement
             static::DUREE_PRET => 'duree_pret',
-            static::TAUX_PRET => 'taux_pret',
             static::MONTANT_PRET => 'montant_pret',
             static::NOM_BANQUE => 'nom_banque',
             static::ADRESSE_BANQUE => 'adresse_banque',
@@ -126,6 +125,7 @@ class FlagEnum extends ReadableEnum
             static::DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT => 'document_mandat_recherche_credit_montant',
             static::DOCUMENT_AVIS_CONSEIL_DONNE => 'document_avis_conseil_donne',
             static::DOCUMENT_OFFRE_PRET => 'document_offre_pret',
+            static::DOCUMENT_FINANCEMENT_AUTRE => 'document_financement_autre',
             // Interlocuteur
             static::INTERLOCUTEUR_PRINCIPAL_LDAP => 'interlocuteur_principal_ldap',
             static::INTERLOCUTEUR_LDAP => 'interlocuteur_ldap'
@@ -153,6 +153,7 @@ class FlagEnum extends ReadableEnum
             FlagEnum::DOCUMENT_MANDAT_RECHERCHE_CREDIT_MONTANT,
             FlagEnum::DOCUMENT_AVIS_CONSEIL_DONNE,
             FlagEnum::DOCUMENT_OFFRE_PRET,
+            FlagEnum::DOCUMENT_FINANCEMENT_AUTRE,
             FlagEnum::INTERLOCUTEUR_LDAP,
             FlagEnum::INTERLOCUTEUR_PRINCIPAL_LDAP
         ];
