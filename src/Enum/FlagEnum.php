@@ -39,6 +39,7 @@ class FlagEnum extends ReadableEnum
     const DATE_LIVRAISON = 'date_livraison'; // A DEFINIR
     const DATE_LIVRAISON_PREVISIONNELLE = 'date_livraison_previsionnelle'; // A DEFINIR
     const ACHAT_TTC = 'achat_ttc'; // OK
+    const OPERATEUR_PROMOTEUR_INTERNE_LIBELLE = 'operateur_promoteur_interne_libelle'; // OK
 
     // Appels de fonds
     const APPEL_DE_FOND_LIBELLE = 'appel_de_fond_libelle'; // OK
@@ -98,6 +99,7 @@ class FlagEnum extends ReadableEnum
             static::VENDU_PAR => 'vendu_par',
             static::ACHAT_CASH => 'achat_cash',
             static::ACHAT_TTC => 'achat_ttc',
+            static::OPERATEUR_PROMOTEUR_INTERNE_LIBELLE => 'operateur_promoteur_interne_libelle',
             // Appels de fonds
             static::APPEL_DE_FOND_LIBELLE => 'appel_de_fond_libelle',
             static::APPEL_DE_FOND_DATE => 'appel_de_fond_date',
