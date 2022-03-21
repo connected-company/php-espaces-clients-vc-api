@@ -63,6 +63,7 @@ class FlagEnum extends ReadableEnum
     const DOCUMENT_PLANS = 'document_plans'; // OK
     const DOCUMENT_ATTESTATION_NOTAIRE_ACTE = 'document_attestation_notaire_acte'; // OK
     const DOCUMENT_APPEL_FOND = 'document_appel_fond'; // OK
+    const DOCUMENT_APPEL_FOND_PHOTO = 'document_appel_fond_photo'; // OK
     const DOCUMENT_BAIL_COMMERCIAL = 'document_bail_commercial'; // OK
     const DOCUMENT_MANDAT_GESTION = 'document_mandat_gestion'; // OK
     const DOCUMENT_RELEVE_COMPTE = 'document_releve_compte'; // OK
@@ -123,6 +124,7 @@ class FlagEnum extends ReadableEnum
             static::DOCUMENT_PLANS => 'document_plans',
             static::DOCUMENT_ATTESTATION_NOTAIRE_ACTE => 'document_attestation_notaire_acte',
             static::DOCUMENT_APPEL_FOND => 'document_appel_fond',
+            static::DOCUMENT_APPEL_FOND_PHOTO => 'document_appel_fond_photo',
             static::DOCUMENT_BAIL_COMMERCIAL => 'document_bail_commercial',
             static::DOCUMENT_MANDAT_GESTION => 'document_mandat_gestion',
             static::DOCUMENT_RELEVE_COMPTE => 'document_releve_compte',
@@ -147,6 +149,7 @@ class FlagEnum extends ReadableEnum
             FlagEnum::DOCUMENT_ANNEXES,
             FlagEnum::DOCUMENT_PLANS,
             FlagEnum::DOCUMENT_APPEL_FOND,
+            FlagEnum::DOCUMENT_APPEL_FOND_PHOTO,
             FlagEnum::DOCUMENT_LOT_AUTRE
         ];
 

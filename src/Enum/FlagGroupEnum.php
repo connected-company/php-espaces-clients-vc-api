@@ -45,7 +45,8 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_APPELE)
             ],
             self::DOCUMENTS_APPEL_FOND => [
-                FlagEnum::get(FlagEnum::DOCUMENT_APPEL_FOND)
+                FlagEnum::get(FlagEnum::DOCUMENT_APPEL_FOND),
+                FlagEnum::get(FlagEnum::DOCUMENT_APPEL_FOND_PHOTO)
             ],
             self::DOCUMENTS_AUTRE => [
                 FlagEnum::get(FlagEnum::DOCUMENT_LOT_AUTRE)
