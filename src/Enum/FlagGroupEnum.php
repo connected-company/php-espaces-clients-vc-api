@@ -14,6 +14,7 @@ class FlagGroupEnum extends ReadableEnum
 
     const APPELS_DE_FOND = 'appels_de_fond';
     const DOCUMENTS_APPEL_FOND = 'documents_appel_fond';
+    const DOCUMENTS_AUTRE = 'documents_autre';
 
     /**
      * @return array
@@ -22,7 +23,8 @@ class FlagGroupEnum extends ReadableEnum
     {
         return [
             static::APPELS_DE_FOND => 'appels_de_fond',
-            static::DOCUMENTS_APPEL_FOND => 'documents_appel_fond'
+            static::DOCUMENTS_APPEL_FOND => 'documents_appel_fond',
+            static::DOCUMENTS_AUTRE => 'documents_autre'
         ];
     }
 
@@ -44,6 +46,9 @@ class FlagGroupEnum extends ReadableEnum
             ],
             self::DOCUMENTS_APPEL_FOND => [
                 FlagEnum::get(FlagEnum::DOCUMENT_APPEL_FOND)
+            ],
+            self::DOCUMENTS_AUTRE => [
+                FlagEnum::get(FlagEnum::DOCUMENT_LOT_AUTRE)
             ]
         ];
 

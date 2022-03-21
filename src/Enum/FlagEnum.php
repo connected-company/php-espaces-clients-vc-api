@@ -66,6 +66,7 @@ class FlagEnum extends ReadableEnum
     const DOCUMENT_BAIL_COMMERCIAL = 'document_bail_commercial'; // OK
     const DOCUMENT_MANDAT_GESTION = 'document_mandat_gestion'; // OK
     const DOCUMENT_RELEVE_COMPTE = 'document_releve_compte'; // OK
+    const DOCUMENT_LOT_AUTRE = 'document_lot_autre'; // OK
 
     /**
      * @return array
@@ -124,7 +125,8 @@ class FlagEnum extends ReadableEnum
             static::DOCUMENT_APPEL_FOND => 'document_appel_fond',
             static::DOCUMENT_BAIL_COMMERCIAL => 'document_bail_commercial',
             static::DOCUMENT_MANDAT_GESTION => 'document_mandat_gestion',
-            static::DOCUMENT_RELEVE_COMPTE => 'document_releve_compte'
+            static::DOCUMENT_RELEVE_COMPTE => 'document_releve_compte',
+            static::DOCUMENT_LOT_AUTRE => 'document_lot_autre'
         ];
     }
 
@@ -144,7 +146,8 @@ class FlagEnum extends ReadableEnum
             FlagEnum::APPEL_DE_FOND_APPELE,
             FlagEnum::DOCUMENT_ANNEXES,
             FlagEnum::DOCUMENT_PLANS,
-            FlagEnum::DOCUMENT_APPEL_FOND
+            FlagEnum::DOCUMENT_APPEL_FOND,
+            FlagEnum::DOCUMENT_LOT_AUTRE
         ];
 
         return in_array($flag, $flagAsCollection);
