@@ -1,7 +1,7 @@
 # php-espaces-clients-vc-api
 *Auteur : Léo Boiron (lboiron@connected-company.fr)*
 
-Librairie permettant de structurer les données demandées par les espaces clients Valeur & Capital.
+Librairie permettant de structurer les données demandées par les espaces clients Valority.
 
 # Avertissement
 - PHP 8 requis pour le moment
