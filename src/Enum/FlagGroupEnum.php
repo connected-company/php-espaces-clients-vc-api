@@ -46,7 +46,6 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::ADRESSE_BANQUE),
                 FlagEnum::get(FlagEnum::COMMUNE_BANQUE),
                 FlagEnum::get(FlagEnum::CODE_POSTAL_BANQUE),
-                FlagEnum::get(FlagEnum::DOCUMENT_FACTURE_CREDIT),
             ],
             self::INTERLOCUTEURS => [
                 FlagEnum::get(FlagEnum::INTERLOCUTEUR_LDAP),
