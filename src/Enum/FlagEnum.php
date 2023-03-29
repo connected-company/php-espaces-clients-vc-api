@@ -65,6 +65,7 @@ class FlagEnum extends ReadableEnum
     const DOCUMENT_AVIS_CONSEIL_DONNE = 'document_avis_conseil_donne';
     const DOCUMENT_OFFRE_PRET = 'document_offre_pret';
     const DOCUMENT_FINANCEMENT_AUTRE = 'document_financement_autre'; // OK
+    const DOCUMENT_FACTURE_CREDIT = 'document_facture_credit'; // OK
     // Interlocuteur
     const INTERLOCUTEUR_PRINCIPAL_LDAP = 'interlocuteur_principal_ldap';
     const INTERLOCUTEUR_LDAP = 'interlocuteur_ldap';
@@ -126,6 +127,7 @@ class FlagEnum extends ReadableEnum
             static::DOCUMENT_AVIS_CONSEIL_DONNE => 'document_avis_conseil_donne',
             static::DOCUMENT_OFFRE_PRET => 'document_offre_pret',
             static::DOCUMENT_FINANCEMENT_AUTRE => 'document_financement_autre',
+            static::DOCUMENT_FACTURE_CREDIT => 'document_facture_credit',
             // Interlocuteur
             static::INTERLOCUTEUR_PRINCIPAL_LDAP => 'interlocuteur_principal_ldap',
             static::INTERLOCUTEUR_LDAP => 'interlocuteur_ldap'
@@ -154,6 +156,7 @@ class FlagEnum extends ReadableEnum
             FlagEnum::DOCUMENT_AVIS_CONSEIL_DONNE,
             FlagEnum::DOCUMENT_OFFRE_PRET,
             FlagEnum::DOCUMENT_FINANCEMENT_AUTRE,
+            FlagEnum::DOCUMENT_FACTURE_CREDIT,
             FlagEnum::INTERLOCUTEUR_LDAP,
             FlagEnum::INTERLOCUTEUR_PRINCIPAL_LDAP
         ];

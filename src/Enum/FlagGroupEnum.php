@@ -37,7 +37,7 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_LIBELLE),
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_DATE),
                 FlagEnum::get(FlagEnum::APPEL_DE_FOND_MONTANT),
-                FlagEnum::get(FlagEnum::APPEL_DE_FOND_STATUT)
+                FlagEnum::get(FlagEnum::APPEL_DE_FOND_STATUT),
             ],
             self::FINANCEMENT => [
                 FlagEnum::get(FlagEnum::DUREE_PRET),
@@ -45,13 +45,14 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::NOM_BANQUE),
                 FlagEnum::get(FlagEnum::ADRESSE_BANQUE),
                 FlagEnum::get(FlagEnum::COMMUNE_BANQUE),
-                FlagEnum::get(FlagEnum::CODE_POSTAL_BANQUE)
+                FlagEnum::get(FlagEnum::CODE_POSTAL_BANQUE),
+                FlagEnum::get(FlagEnum::DOCUMENT_FACTURE_CREDIT),
             ],
             self::INTERLOCUTEURS => [
-                FlagEnum::get(FlagEnum::INTERLOCUTEUR_LDAP)
+                FlagEnum::get(FlagEnum::INTERLOCUTEUR_LDAP),
             ],
             self::DOCUMENTS_AUTRE => [
-                FlagEnum::get(FlagEnum::DOCUMENT_FINANCEMENT_AUTRE)
+                FlagEnum::get(FlagEnum::DOCUMENT_FINANCEMENT_AUTRE),
             ]
         ];
 
