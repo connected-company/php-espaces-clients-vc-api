@@ -4,7 +4,9 @@ namespace Connected\EspaceClientVC;
 
 use Connected\EspaceClientVC\Contract\ClientInterface;
 use Connected\EspaceClientVC\Enum\EnvEnum;
+use Connected\EspaceClientVC\Model\Contrat;
 use Connected\EspaceClientVC\Model\NewClient;
+use Connected\EspaceClientVC\Model\UpdatedClient;
 use Symfony\Component\HttpClient\CurlHttpClient;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
@@ -14,12 +16,13 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 class HttpClient
 {
     const URLS = [
-        EnvEnum::QUALIF => 'https://espace-client-qualif.valeur-et-capital.com',
+        EnvEnum::QUALIF => 'https://espace-client-qualif.valority.com',
         EnvEnum::PROD => 'https://espace.intra'
     ];
 
     const ROUTES = [
-        'newClient' => '/api/user'
+        'newClient' => '/api/user',
+        'updatedClient' => '/api/user/update'
     ];
 
     /**
@@ -56,6 +59,21 @@ class HttpClient
     }
 
     /**
+     * Cette fonction a pour but d'envoyer un client dont les valeur ci dessous ont étés changées.
+     *
+     * Attends un tableau avec une clé "user" contenant l'email de l'utilisateur actuel
+     * Une autre clé "values" avec les valeurs : Email, Nom, Prenom, TelephonePortable(avec indicatif) : toutes facultatives
+     *
+     * @param array $updatedFields Array.
+     * 
+     * @return UpdatedClient
+     */
+    public function updateClient(array $updatedFields): UpdatedClient
+    {
+        return new UpdatedClient($this->request('POST', self::ROUTES['updatedClient'], $updatedFields));
+    }
+
+    /**
      * Wrapper pour les requêtes.
      *
      * @param  string $method Méthode.
@@ -66,7 +84,7 @@ class HttpClient
      */
     private function request(string $method, string $uri, array $body = []): array
     {
-        $response = $this->httpClient->request($method, self::URLS[(string)$this->environment] . $uri, [
+        $response = $this->httpClient->request($method, self::URLS[$this->environment->getReadable()] . $uri, [
             'headers' => ['X-API-KEY' => $this->apiKey],
             'json' => $body
         ]);
