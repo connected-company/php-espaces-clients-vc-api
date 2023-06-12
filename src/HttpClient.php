@@ -16,7 +16,7 @@ class HttpClient
 {
     const URLS = [
         EnvEnum::QUALIF => 'https://espace-client-qualif.valority.com',
-        EnvEnum::PROD => 'https://espace.intra'
+        EnvEnum::PROD => 'https://espace-client.valority.com'
     ];
 
     const ROUTES = [
