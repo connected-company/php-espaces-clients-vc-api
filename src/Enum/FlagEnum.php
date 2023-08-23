@@ -51,7 +51,12 @@ class FlagEnum extends ReadableEnum
     const NOM_BANQUE = 'nom_banque'; // NC
     const ADRESSE_BANQUE = 'adresse_banque'; // NC
     const COMMUNE_BANQUE = 'commune_banque'; // NC
-    const CODE_POSTAL_BANQUE = 'code_postal_banque'; // NC
+    const LIEN_SIGNATURE_ENTREE_RELATION = 'lien_signature_entree_relation';
+    const LIEN_SIGNATURE_MANDAT_RECHERCHE = 'lien_signature_mandat_recherche';
+    const LIEN_SIGNATURE_DEMANDE_FINANCEMENT = 'lien_signature_demande_financement';
+    const LIEN_SIGNATURE_avis_conseil = 'lien_signature_avis_conseil';
+    const PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ACTIF = 'process_signature_recherche_financement_actif';
+    const PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ETAPE = 'process_signature_recherche_financement_etape';
     // Document
     const DOCUMENT_CONTRAT_RESERVATION = 'document_contrat_reservation'; // OK
     const DOCUMENT_ANNEXES = 'document_annexes'; // OK
@@ -114,6 +119,12 @@ class FlagEnum extends ReadableEnum
             static::ADRESSE_BANQUE => 'adresse_banque',
             static::COMMUNE_BANQUE => 'commune_banque',
             static::CODE_POSTAL_BANQUE => 'code_postal_banque',
+            static::LIEN_SIGNATURE_ENTREE_RELATION => 'lien_signature_entree_relation',
+            static::LIEN_SIGNATURE_MANDAT_RECHERCHE => 'lien_signature_mandat_recherche',
+            static::LIEN_SIGNATURE_DEMANDE_FINANCEMENT => 'lien_signature_demande_financement',
+            static::LIEN_SIGNATURE_avis_conseil => 'lien_signature_avis_conseil',
+            static::PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ACTIF => 'process_signature_recherche_financement_actif',
+            static::PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ETAPE => 'process_signature_recherche_financement_etape',
             // Document
             static::DOCUMENT_CONTRAT_RESERVATION => 'document_contrat_reservation',
             static::DOCUMENT_ANNEXES => 'document_annexes',

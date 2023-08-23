@@ -46,6 +46,12 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::ADRESSE_BANQUE),
                 FlagEnum::get(FlagEnum::COMMUNE_BANQUE),
                 FlagEnum::get(FlagEnum::CODE_POSTAL_BANQUE),
+                FlagEnum::get(FlagEnum::LIEN_SIGNATURE_ENTREE_RELATION),
+                FlagEnum::get(FlagEnum::LIEN_SIGNATURE_MANDAT_RECHERCHE),
+                FlagEnum::get(FlagEnum::LIEN_SIGNATURE_DEMANDE_FINANCEMENT),
+                FlagEnum::get(FlagEnum::LIEN_SIGNATURE_avis_conseil),
+                FlagEnum::get(FlagEnum::PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ACTIF),
+                FlagEnum::get(FlagEnum::PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ETAPE),
             ],
             self::INTERLOCUTEURS => [
                 FlagEnum::get(FlagEnum::INTERLOCUTEUR_LDAP),
