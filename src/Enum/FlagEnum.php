@@ -51,6 +51,7 @@ class FlagEnum extends ReadableEnum
     const NOM_BANQUE = 'nom_banque'; // NC
     const ADRESSE_BANQUE = 'adresse_banque'; // NC
     const COMMUNE_BANQUE = 'commune_banque'; // NC
+    const CODE_POSTAL_BANQUE = 'code_postal_banque'; // NC
     const LIEN_SIGNATURE_ENTREE_RELATION = 'lien_signature_entree_relation';
     const LIEN_SIGNATURE_MANDAT_RECHERCHE = 'lien_signature_mandat_recherche';
     const LIEN_SIGNATURE_DEMANDE_FINANCEMENT = 'lien_signature_demande_financement';
