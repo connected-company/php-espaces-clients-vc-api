@@ -55,7 +55,7 @@ class FlagEnum extends ReadableEnum
     const LIEN_SIGNATURE_ENTREE_RELATION = 'lien_signature_entree_relation';
     const LIEN_SIGNATURE_MANDAT_RECHERCHE = 'lien_signature_mandat_recherche';
     const LIEN_SIGNATURE_DEMANDE_FINANCEMENT = 'lien_signature_demande_financement';
-    const LIEN_SIGNATURE_avis_conseil = 'lien_signature_avis_conseil';
+    const LIEN_SIGNATURE_AVIS_CONSEIL = 'lien_signature_avis_conseil';
     const PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ACTIF = 'process_signature_recherche_financement_actif';
     const PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ETAPE = 'process_signature_recherche_financement_etape';
     // Document
