@@ -49,7 +49,7 @@ class FlagGroupEnum extends ReadableEnum
                 FlagEnum::get(FlagEnum::LIEN_SIGNATURE_ENTREE_RELATION),
                 FlagEnum::get(FlagEnum::LIEN_SIGNATURE_MANDAT_RECHERCHE),
                 FlagEnum::get(FlagEnum::LIEN_SIGNATURE_DEMANDE_FINANCEMENT),
-                FlagEnum::get(FlagEnum::LIEN_SIGNATURE_avis_conseil),
+                FlagEnum::get(FlagEnum::LIEN_SIGNATURE_AVIS_CONSEIL),
                 FlagEnum::get(FlagEnum::PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ACTIF),
                 FlagEnum::get(FlagEnum::PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ETAPE),
             ],
