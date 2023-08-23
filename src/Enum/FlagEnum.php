@@ -123,7 +123,7 @@ class FlagEnum extends ReadableEnum
             static::LIEN_SIGNATURE_ENTREE_RELATION => 'lien_signature_entree_relation',
             static::LIEN_SIGNATURE_MANDAT_RECHERCHE => 'lien_signature_mandat_recherche',
             static::LIEN_SIGNATURE_DEMANDE_FINANCEMENT => 'lien_signature_demande_financement',
-            static::LIEN_SIGNATURE_avis_conseil => 'lien_signature_avis_conseil',
+            static::LIEN_SIGNATURE_AVIS_CONSEIL => 'lien_signature_avis_conseil',
             static::PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ACTIF => 'process_signature_recherche_financement_actif',
             static::PROCESS_SIGNATURE_RECHERCHE_FINANCEMENT_ETAPE => 'process_signature_recherche_financement_etape',
             // Document
