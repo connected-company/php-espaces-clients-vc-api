@@ -52,7 +52,7 @@ class ContratFactory
                 $flags = FlagGroupEnum::mapping($flagGroup);
                 foreach ($flags as $flag) {
                     foreach ($this->processFlagRequested($flag, $configuration, $appContrat) as $flagData) {
-                        if(!empty($flagData->getValue())) {
+                        if($flagData->getValue() !== null) {
                             $contrat->addFlagData($flagData);
                         }
                     }
