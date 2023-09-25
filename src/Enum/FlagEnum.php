@@ -31,7 +31,7 @@ class FlagEnum extends ReadableEnum
     const VENDU_PAR = 'vendu_par'; // OK
     const ACHAT_CASH = 'achat_cash'; // OK
     const DATE_ACTE = 'date_acte'; // OK
-    const DATE_OFFRE_DE_PRET = 'date_offre_de_pret'; // NC
+    const DATE_OFFRE_DE_PRET_TRANSMISE = 'date_offre_de_pret_transmise'; // NC
     const DATE_ACCEPTATION_OFFRE_DE_PRET = 'date_acceptation_offre_de_pret'; // NC
     const DATE_PRE_LIVRAISON = 'date_pre_livraison'; // NC
 
@@ -96,7 +96,7 @@ class FlagEnum extends ReadableEnum
             static::DATE_LIVRAISON => 'date_livraison',
             static::DATE_NOTIFICATION_LIVRAISON => 'date_notification_livraison',
             static::DATE_LIVRAISON_PREVISIONNELLE => 'date_livraison_previsionnelle',
-            static::DATE_OFFRE_DE_PRET => 'date_offre_de_pret',
+            static::DATE_OFFRE_DE_PRET_TRANSMISE => 'date_offre_de_pret_transmise',
             static::DATE_ACCEPTATION_OFFRE_DE_PRET => 'date_acceptation_offre_de_pret',
             static::VENDU_PAR => 'vendu_par',
             static::ACHAT_CASH => 'achat_cash',
